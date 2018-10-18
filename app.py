@@ -34,8 +34,10 @@ def api():
     input_data = request.json
     app.logger.info("api_input: " + str(input_data))
     output_data = model_api(input_data)
+    # output_data = ['hello', 'world']
     app.logger.info("api_output: " + str(output_data))
     response = jsonify(output_data)
+    app.logger.info(response)
     return response
 
 
