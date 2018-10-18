@@ -54,13 +54,13 @@ def load_labels(label_file):
 
 def get_model_api():
     # hardcode some values for now
-    model_file = None
-    label_file = None
+    model_file = 'model/output_graph.pb'
+    label_file = 'model/output_labels.txt'
     input_height = input_width = 299
     input_mean = 0
     input_std = 255
-    input_name = None
-    output_name = None
+    input_name = 'import/Placeholder'
+    output_name = 'import/final_result'
 
     # Initialize the model and reload the weights
     graph = load_graph(model_file)
